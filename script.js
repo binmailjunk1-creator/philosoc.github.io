@@ -23,7 +23,7 @@ const gameData = [
         scenario: "A ship has all its parts gradually replaced over time. When the last original part is replaced, is it still the same ship?",
         choices: [
             { text: "Yes, it's the same ship - identity is about continuity of purpose", philosophy: "Pragmatist", tag: "Function" },
-            { text: "No, it's a completely different ship made of different materials", philosophy: "Materialist", tag: "Physical" },
+            { text: "Identity is socially and historiccally constructed - changing the wood changes something about it, but most of its form stays", philosophy: "Materialist", tag: "Physical" },
             { text: "Identity is just a useful concept we invented - the question is meaningless", philosophy: "Skeptic", tag: "Concepts" }
         ]
     },
@@ -32,7 +32,7 @@ const gameData = [
         scenario: "Scientists claim they can predict your next decision by scanning your brain. If your choices are predictable, are you truly free?",
         choices: [
             { text: "We have free will despite brain activity - consciousness transcends matter", philosophy: "Idealist", tag: "Mind" },
-            { text: "Free will is an illusion - we're sophisticated biological machines", philosophy: "Materialist", tag: "Determinism" },
+            { text: "We interact with the world and participate in it accordingly, human beings aren't static or transcendental", philosophy: "Materialist", tag: "Real World" },
             { text: "We create our freedom through authentic choices, regardless of prediction", philosophy: "Existentialist", tag: "Authenticity" }
         ]
     },
@@ -51,7 +51,9 @@ const gameData = [
         choices: [
             { text: "Maximize benefits for the worst-off members of society", philosophy: "Utilitarian", tag: "Welfare" },
             { text: "Ensure equal basic rights and opportunities for all", philosophy: "Deontologist", tag: "Rights" },
-            { text: "Focus on cultivating virtue and wisdom in citizens", philosophy: "Virtue Ethicist", tag: "Character" }
+            { text: "Focus on cultivating virtue and wisdom in citizens", philosophy: "Virtue Ethicist", tag: "Character" },
+            { text: "Recognize the position of the people and how they live - and act in a manner that ensures the people get the best form of life possible in the current world", philosophy: "Materialist", tag: "Real World" },
+            { text: "Recognize the potential of every particular person and make sure they live their lives accordingly", philosophy: "Platonist", tag: "Metals" }
         ]
     },
     {
@@ -61,7 +63,8 @@ const gameData = [
             { text: "To reduce suffering and increase happiness in the world", philosophy: "Utilitarian", tag: "Happiness" },
             { text: "To create your own meaning through choices and authentic living", philosophy: "Existentialist", tag: "Self-Made" },
             { text: "To develop virtue, wisdom, and excellence of character", philosophy: "Virtue Ethicist", tag: "Flourishing" },
-            { text: "The question itself assumes meaning exists - I'm not convinced it does", philosophy: "Skeptic", tag: "Doubt" }
+            { text: "The question itself assumes meaning exists - I'm not convinced it does", philosophy: "Skeptic", tag: "Doubt" },
+            { text: "The meanin of life exists in the world as it is - one lives in it, deciphers it, and exists accordingly", philosohy: "Materialist", tag: "Real World" }
         ]
     },
     {
