@@ -23,7 +23,7 @@ const gameData = [
         scenario: "A ship has all its parts gradually replaced over time. When the last original part is replaced, is it still the same ship?",
         choices: [
             { text: "Yes, it's the same ship - identity is about continuity of purpose", philosophy: "Pragmatist", tag: "Function" },
-            { text: "Identity is socially and historiccally constructed - changing the wood changes something about it, but most of its form stays", philosophy: "Materialist", tag: "Physical" },
+            { text: "Identity is socially and historcally constructed - changing the wood changes something about it, but most of its form stays", philosophy: "Materialist", tag: "Physical" },
             { text: "Identity is just a useful concept we invented - the question is meaningless", philosophy: "Skeptic", tag: "Concepts" }
         ]
     },
@@ -41,8 +41,8 @@ const gameData = [
         scenario: "You can plug into a machine that gives you any experiences you want - you'll feel happy and fulfilled, but none of it will be 'real'. Do you plug in?",
         choices: [
             { text: "Yes - happiness and positive experiences are what matter most", philosophy: "Hedonist", tag: "Pleasure" },
-            { text: "No - authenticity, real relationships, and genuine achievement matter", philosophy: "Virtue Ethicist", tag: "Excellence" },
-            { text: "I would choose based on what serves my authentic self-project", philosophy: "Existentialist", tag: "Self-Creation" }
+            { text: "No - authenticity, real relationships, and genuine achievement matter", philosophy: "Existentialist", tag: "Excellence" },
+            { text: "There is something more to reality than physical experience", philosophy: "Idealist", tag: "Self-Creation" }
         ]
     },
     {
