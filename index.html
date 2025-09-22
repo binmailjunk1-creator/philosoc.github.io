@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosoc Quiz - Discover Your Philosophical Identity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo" onclick="showHome()">🧠 Philosoc Quiz</a>
+            <div class="nav-links">
+                <a href="#" onclick="showHome()" class="nav-link active" id="home-link">Home</a>
+                <a href="#" onclick="showGame()" class="nav-link" id="game-link">Take Quiz</a>
+                <a href="#" onclick="showGroupResults()" class="nav-link" id="results-link">Group Results</a>
+                <a href="#" onclick="showPhilosophies()" class="nav-link" id="philosophies-link">All Types</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Home Section -->
+        <section id="home-section" class="section active">
+            <div class="hero">
+                <h1>Philosoc Quiz</h1>
+                <p>Discover which philosophical tradition resonates with your worldview</p>
+                <a href="#" class="cta-button" onclick="showGame()">Discover Your Philosophy</a>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Philosophical Types</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Thought Experiments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2500+</div>
+                    <div class="stat-label">Years of Wisdom</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🎯 How It Works</h2>
+                <p>Journey through 8 famous philosophical thought experiments. Each choice you make reveals something about your fundamental beliefs and values. At the end, discover which of 10 philosophical traditions best matches your worldview - from ancient wisdom to modern insights.</p>
+            </div>
+
+            <div class="card">
+                <h2>🏛️ The 10 Philosophical Types</h2>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card" onclick="showPhilosophies()">
+                        <div class="emoji">⚖️</div>
+                        <div class="name">The Utilitarian</div>
+                        <div class="subtitle">Greatest good for all</div>
+                    </div>
+                    <div class="philosophy-card" onclick="showPhilosophies()">
+                        <div class="emoji">📏</div>
+                        <div class="name">The Deontologist</div>
+                        <div class="subtitle">Duty and moral rules</div>
+                    </div>
+                    <div class="philosophy-card" onclick="showPhilosophies()">
+                        <div class="emoji">🌟</div>
+                        <div class="name">The Virtue Ethicist</div>
+                        <div class="subtitle">Character and excellence</div>
+                    </div>
+                    <div class="philosophy-card" onclick="showPhilosophies()">
+                        <div class="emoji">🎭</div>
+                        <div class="name">The Existentialist</div>
+                        <div class="subtitle">Authentic self-creation</div>
+                    </div>
+                    <div class="philosophy-card" onclick="showPhilosophies()">
+                        <div class="emoji">🔍</div>
+                        <div class="name">The Skeptic</div>
+                        <div class="subtitle">Question everything</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px; color: #718096;">
+                    <em>And 5 more fascinating types to discover...</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game-section" class="section game-interface">
+            <div class="card">
+                <div class="question-counter" id="question-counter">Question 1 of 8</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 12.5%;"></div>
+                </div>
+
+                <div class="scenario-card" id="scenario-card">
+                    <div class="scenario-title" id="scenario-title"></div>
+                    <div class="scenario-text" id="scenario-text"></div>
+                </div>
+
+                <div class="choices" id="choices"></div>
+
+                <button class="next-btn hidden" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="section results-container">
+            <div class="card">
+                <div class="philosophy-avatar" id="philosophy-avatar"></div>
+                <h1 class="philosophy-name" id="philosophy-name"></h1>
+                <p class="philosophy-subtitle" id="philosophy-subtitle"></p>
+                <div class="philosophy-description" id="philosophy-description"></div>
+                
+                <div class="philosophy-traits" id="philosophy-traits"></div>
+                
+                <div class="compatibility-section">
+                    <h3 class="compatibility-title">Famous Philosophers Who Share Your Views</h3>
+                    <div id="famous-philosophers"></div>
+                </div>
+
+                <div class="form-group" style="margin: 30px 0;">
+                    <label for="player-name">Share your result with the group:</label>
+                    <input type="text" id="player-name" placeholder="Enter your name (optional)" maxlength="25">
+                    <button class="next-btn" onclick="submitResult()" style="margin-top: 10px;">Add to Group Results</button>
+                </div>
+                
+                <button class="next-btn" onclick="showGroupResults()">View Group Results</button>
+                <button class="next-btn" onclick="showPhilosophies()">Explore All 10 Types</button>
+                <button class="next-btn" onclick="playAgain()">Take Quiz Again</button>
+            </div>
+        </section>
+
+        <!-- Group Results Section -->
+        <section id="group-results-section" class="section results-container hidden">
+            <div class="card">
+                <h1>🏛️ Group Philosophy Results</h1>
+                <p>See what philosophical types everyone in your group discovered!</p>
+                
+                <div class="stats-grid" style="margin: 30px 0;">
+                    <div class="stat-card" style="background: rgba(255,255,255,0.9); color: #4a5568;">
+                        <div class="stat-number" id="total-participants">0</div>
+                        <div class="stat-label">Total Participants</div>
+                    </div>
+                    <div class="stat-card" style="background: rgba(255,255,255,0.9); color: #4a5568;">
+                        <div class="stat-number" id="most-common-type">-</div>
+                        <div class="stat-label">Most Common Type</div>
+                    </div>
+                    <div class="stat-card" style="background: rgba(255,255,255,0.9); color: #4a5568;">
+                        <div class="stat-number" id="unique-types">0</div>
+                        <div class="stat-label">Different Types Found</div>
+                    </div>
+                </div>
+
+                <div id="group-results-list"></div>
+                
+                <div style="margin-top: 30px;">
+                    <button class="next-btn" onclick="exportResults()">📋 Copy Results to Share</button>
+                    <button class="next-btn" onclick="clearResults()">🗑️ Clear All Results</button>
+                    <button class="next-btn" onclick="showHome()">🏠 Back to Home</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Philosophies Section -->
+        <section id="philosophies-section" class="section philosophies-container hidden">
+            <div class="card">
+                <h1>The 10 Philosophical Personality Types</h1>
+                <p>Explore all the philosophical traditions and find kindred spirits in the world of ideas.</p>
+                
+                <div id="all-philosophies-grid"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
